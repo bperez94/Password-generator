@@ -20,12 +20,17 @@ function writePassword() {
       alert("incorrect answer try again")
     }
 
+    var answer = ("firstQuestion")
   
-  
+    if (firstQuestion = ) {
+      
+    } else {
+      
+    }
   
 
   // loop for passwords characters
- for (var i = 0; i < all.length; i++) {
+  for (var i = 0; i < all.length; i++) {
    passwordText = passwordText + all.charAt(Math.floor(Math.random() * Math.floor(all.length - 1))); 
    
  }
