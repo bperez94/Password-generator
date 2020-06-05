@@ -6,37 +6,28 @@ var numeric = "0123456789";
 var special = "~!@#$%^&*";
 var all = [upperCase,lowerCase,numeric,special];
 var passwordText = document.querySelector("#password");
-var passText = ""
+var inculdeUpperCaese = document.getElementById("UpperCaseBox");
+var inculdeLowerCase = document.getElementById("LowerCaseBox");
+var inculdeNumeric = document.getElementById("NumericCaseBox");
+var inculdeSpecial = document.getElementById("SpecialCaseBox");
+
 // Write password to the #password input
 function writePassword() {
- 
-  // first prompt (password lenght)
-  var firstQuestion = prompt("You must choose a password lenght between 8-128 characters.");
+
+    // local variables
+
+
+    // first alert (password lenght)
+     var firstQuestion = alert
     
-  //second promt/if else
-    if (firstQuestion > 7 && firstQuestion < 129)  {
-      var secondQuestion = prompt("What character type would you like? You can pick uppercae, lowercase, numeric, and special. Or you may choose all.")
-    } else {
-      alert("incorrect answer try again")
-    }
+    //second promt
+ 
 
-    var answer = ("firstQuestion")
+    // loop for passwords characters
+ 
   
-    if (firstQuestion = ) {
-      
-    } else {
-      
-    }
+     // add password to text box
   
-
-  // loop for passwords characters
-  for (var i = 0; i < all.length; i++) {
-   passwordText = passwordText + all.charAt(Math.floor(Math.random() * Math.floor(all.length - 1))); 
-   
- }
-  
-  // add password to text box
-  document.getElementById("password").all = passText
 } 
 
 
