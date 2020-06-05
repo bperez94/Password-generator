@@ -10,7 +10,7 @@ var inculdeUpperCaese = document.getElementById("UpperCaseBox");
 var inculdeLowerCase = document.getElementById("LowerCaseBox");
 var inculdeNumeric = document.getElementById("NumericCaseBox");
 var inculdeSpecial = document.getElementById("SpecialCaseBox");
-
+var charNumber = document.getElementById("CharacterAmount");
 // first alert (password lenght)
 var firstQuestion = alert("pick you password lenght")
     
@@ -22,18 +22,18 @@ var secondQuestion = alert("Choose if you want uppercase,lowercase,special chara
 function writePassword() {
 
     // local variables
- 
+    var passBox = ""
      
     
 
     // loop for passwords characters
-    for (let i = 0; i < upperCase.length; i++) {
-        const element = array[index];
+    for (var i = 0; i <= charNumber ; i++) {
+        passBox = passBox + all.charAt(Math.floor(Math.random() * Math.floor(all.length - 1)));
         
     }
   
      // add password to text box
-  
+    document.getElementById("password").value = passBox
 } 
 
 
