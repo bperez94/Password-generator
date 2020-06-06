@@ -13,7 +13,8 @@ function checkLenght() {
     if (passLenght < 8 || passLenght > 128 ) {
         alert("enter value between 8 and 128");
         checkLenght();
-    } else { 
+    } 
+    else { 
         return passLenght;
     }
 }
@@ -25,18 +26,20 @@ function generatePassword(){
     var numericConfirm = confirm("Do you want numeric characters");
     var specialConfirm = confirm("Do you want special characters");
     var characters 
-    var password
+    var password 
     
     if (upperCaseCheck && lowerCaseConfirm && numericConfirm && specialConfirm) {
-      characters = upperCase + lowerCase + numeric + special;
+      characters = lowerCase + upperCase + numeric + special;
 
     }
-    
+  // needs more if statments about all possible user choices
+
+  
     for (var i = 0; i < passLenght; i++) {
         password += characters.charAt(Math.floor(Math.random() * characters.lenght));
         
     }
-   console.log(password)
+    console.log(password)
 }
 
 generatePassword()
@@ -46,11 +49,6 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
-  
-     
-    
-
- 
 }
 
 
