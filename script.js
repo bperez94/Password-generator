@@ -1,40 +1,57 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var upperCase = ("A","B","C","D","E","F","G","H","I","J","K","L","N","M","O","P","Q","R","S","T","U","V","W","X","Y","Z");
-var lowerCase = ("a","b","c","e","f","g","h","i","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z,");
-var numeric = ("0,1,2,3,4,5,6,7,8,9");
-var special = ("~,!,@,#,$,%,^,&,*");
-var all = upperCase.concat(lowerCase,numeric,special);
-var passwordText = document.querySelector("#password");
-var inculdeUpperCaese = document.getElementById("UpperCaseBox");
-var inculdeLowerCase = document.getElementById("LowerCaseBox");
-var inculdeNumeric = document.getElementById("NumericCaseBox");
-var inculdeSpecial = document.getElementById("SpecialCaseBox");
-var charNumber = document.getElementById("CharacterAmount");
-// first alert (password lenght)
-var firstQuestion = alert("pick you password lenght")
-    
-//second alert
-var secondQuestion = alert("Choose if you want uppercase,lowercase,special characters, or numbers")
+var lowerCase = "abcdefghijklmnopqrstuvwzxy"
+var upperCase = lowerCase.toLocaleUpperCase
+var numeric = "0123456789"
+var special = "!@#$%^&*"
+var passLenght 
 
-   
+// prompt for passs word lenght
+function checkLenght() {
+    var userChoice = prompt("Choose password lenght between 8 to 128 characters")
+    passLenght = parseInt(userChoice)
+    if (passLenght < 8 || passLenght > 128 ) {
+        alert("enter value between 8 and 128");
+        checkLenght();
+    } else { 
+        return passLenght;
+    }
+}
+function generatePassword(){
+    checkLenght();
+    // confirms 
+    var upperCaseCheck = confirm("Do you want upper case characters");
+    var lowerCaseConfirm = confirm("Do you want lower case characters");
+    var numericConfirm = confirm("Do you want numeric characters");
+    var specialConfirm = confirm("Do you want special characters");
+    var characters 
+    var password
+    
+    if (upperCaseCheck && lowerCaseConfirm && numericConfirm && specialConfirm) {
+      characters = upperCase + lowerCase + numeric + special;
+
+    }
+    
+    for (var i = 0; i < passLenght; i++) {
+        password += characters.charAt(Math.floor(Math.random() * characters.lenght));
+        
+    }
+   console.log(password)
+}
+
+generatePassword()
 // Write password to the #password input
 function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 
-    // local variables
-    var passBox = ""
+  
      
     
 
-    // loop for passwords characters
-    for (var i = 0; i <= charNumber ; i++) {
-        passBox = passBox + all.charAt(Math.floor(Math.random() * Math.floor(all.length - 1)));
-        
-    }
-  
-     // add password to text box
-    document.getElementById("password").value = passBox
-} 
+ 
+}
 
 
 // Add event listener to generate button
