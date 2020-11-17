@@ -1,24 +1,27 @@
-# RANDOM PASSWORD GENERATOR
- 
- ### Created 06/06/2020
+# Password Generator
+    
+#Created on 11/17/2020
 
- #### By Brandon Perez      
+# By Brandon Perez
 
- ## Description
- This page will give you new passwords every time you pick generate password.
- You simply click generate password, then choose how long you want your password 
- to be. Then  select if you want uppercase, lowercase, numbers or special characters 
- in your passowrd. Then your new password will appear.
+## Description 
+This applications will create a random password for users. Password lenght and other specifics are chosen based off of user reponse to certain prmopts.
+    
+## Installation
+1-git clone
+    
+## Known bugs
+ N/A
+    
+## Contact Information
+brandonp940@gmail.com
+    
+## Technologies Used 
+HTML, CSS. JavaScript
+    
+## Contribution
 
- ## Known Bugs
- After you choose what you want in your password, it returns with undefined. To fix
- this all the possible user chocies must be added as if statments and if else statments.
+    
+### License
+MIT
 
- ## Technologies Used
- HTML
- CSS
- JAVASCRIPT
-
- ### License
- Copyright(c) 2020 by (Brandon Perez)
- This software is licensed under MIT license.
