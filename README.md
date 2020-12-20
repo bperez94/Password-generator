@@ -21,7 +21,7 @@ brandonp940@gmail.com
 HTML, CSS, JavaScript, Node
     
 ## Contribution
-https://github.com/bperez94/Password-generator
+https://bperez94.github.io/Password-generator/
     
 ### License
 MIT
